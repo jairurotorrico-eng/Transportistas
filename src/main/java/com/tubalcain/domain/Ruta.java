@@ -1,5 +1,6 @@
 package com.tubalcain.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -27,7 +28,8 @@ public class Ruta {
 
     //Un transportista hacer varias rutas, una rota es solo hecha por un transportista?
     @ManyToOne
-    @JoinColumn(name = "transportistas_id")
-    private Transportista transportistas;
+    @JoinColumn(name = "transportista_id")
+       @JsonIgnoreProperties
+    private Transportista transportista;
 
 }

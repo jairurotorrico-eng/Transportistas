@@ -66,11 +66,7 @@
         </dependency>
 
 		<!-- VAADIN -->
-		<dependency>
-    <groupId>com.vaadin</groupId>
-    <artifactId>vaadin-spring-boot-starter</artifactId>
-    <version>24.2.7</version> <!-- Replace with latest stable -->
-</dependency>
+
 
 		<!-- SPRING SECURITY -->
 		<dependency>

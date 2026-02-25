@@ -1,6 +1,8 @@
 
 package com.tubalcain.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -23,6 +25,7 @@ public class User {
     private String email; //Email como usuaario
     
     @Column(nullable = false)
+     @JsonIgnore //me salia la contra encriptada, pongo esto para probar 
     private String password;
     
     @Enumerated(EnumType.STRING)

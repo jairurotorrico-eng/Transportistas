@@ -67,7 +67,7 @@ public class SecurityConfig {
                 // --- REGLAS DE ACCESO ---
                 .authorizeHttpRequests(auth -> auth
                 // A. LOGIN Y REGISTRO: Público (Cualquiera puede intentar entrar)
-                .requestMatchers("/api/auth/**").permitAll()
+                .requestMatchers("/api/auth/**", "/error").permitAll() //encontar el error 
                 // B. EL RESTO: Privado (Cumple RF-18: Requiere token válido)
                 .anyRequest().authenticated()
                 )

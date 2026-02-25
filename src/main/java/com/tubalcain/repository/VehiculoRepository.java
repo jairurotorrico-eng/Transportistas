@@ -10,12 +10,9 @@ public interface VehiculoRepository  extends JpaRepository<Vehiculo,Long>{
     
     //no haya matriculas duplicadas
     boolean existsByMatricula(String matricula);
+    //Buscar por matrícula
     Optional<Vehiculo> findByMatricula(String matricula);
     
     //Segementación: buscamos el vehículo asiganado a un transportista específico
     Optional<Vehiculo> findByTransportistaId(Long transportistaId);
-    
-    
-    
-    
 }

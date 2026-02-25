@@ -1,5 +1,6 @@
 package com.tubalcain.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -23,7 +24,8 @@ public class Vehiculo {
     @Column(unique = true) 
     private String matricula; //Identificativo
     
-    @OneToOne //Un Transportista tiene su vehíuculo y un vehículo teiene su transportista
-    private Transportista transportistas;
+    @OneToOne (mappedBy = "vehiculo")//Un Transportista tiene su vehíuculo y un vehículo teiene su transportista
+        @JsonIgnoreProperties
+    private Transportista transportista;
 
 }

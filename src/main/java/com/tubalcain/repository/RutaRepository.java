@@ -10,7 +10,6 @@ public interface RutaRepository extends JpaRepository<Ruta, Long> {
     
     //Segmentación: devolvería la lista de rutas de un solo transportista
     //Select * from rutas where trasnportistas_id = ?
-    
     List<Ruta> findByTransportistaId(Long trasportistaId);
     
     
